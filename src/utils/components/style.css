@@ -1,0 +1,97 @@
+.notification-container {
+    visibility: hidden;
+    display: flex;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    color: black;
+    justify-content: flex-start;
+    align-items: center;
+    bottom: 1px;
+    opacity: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4px 9px;
+    box-sizing: border-box;
+    animation: show-close 5s forwards;
+}
+
+.notification-icon{
+    height: 24px;
+    width: 24px;
+}
+
+.notification-text{
+    letter-spacing: 0.3px;
+    padding: 0 5px;
+    white-space: nowrap;
+}
+
+@keyframes show-close{
+    1% {
+        visibility: visible;
+        bottom: 1px;
+        opacity: 0;
+    }
+    20%, 80% {
+        bottom: 50px;
+        opacity: 1;
+    }
+
+    99% {
+        bottom: 1px;
+        opacity: 0;
+    }
+
+    100% {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+
+@keyframes show-close-mob{
+    1% {
+        visibility: visible;
+        opacity: 0;
+    }
+    20%, 80% {
+        right: 20px;
+        top: 20px;
+        opacity: 1;
+    }
+
+    99% {
+        top: 1px;
+        right: 20px;
+        opacity: 0;
+    }
+
+    100% {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+.notification-container-mob {
+    visibility: hidden;
+    display: flex;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    color: black;
+    justify-content: flex-start;
+    align-items: center;
+    top: 20px;
+    opacity: 0;
+    right: 1px;
+    padding: 4px 9px;
+    box-sizing: border-box;
+    animation: show-close 5s forwards;
+}
